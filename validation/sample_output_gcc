@@ -97,7 +97,7 @@
 96 fu{2} src{5,-1} dst{2} FE{34,1} DE{35,1} RN{36,1} DI{37,1} IS{38,1} RR{39,1} EX{40,5} WB{45,1} CM{46,13}
 97 fu{0} src{2,-1} dst{2} FE{34,1} DE{35,1} RN{36,1} DI{37,1} IS{38,7} RR{45,1} EX{46,1} WB{47,1} CM{48,12}
 98 fu{1} src{2,3} dst{2} FE{34,1} DE{35,1} RN{36,1} DI{37,1} IS{38,9} RR{47,1} EX{48,2} WB{50,1} CM{51,9}
-99 fu{2} src{2,-1} dst{2} FE{38,1} DE{39,1} RN{40,1} DI{41,1} IS{42,8} RR{50,1} EX{51,5} WB{56,1} CM{57,3}
+99 fu{2} src{2,-1} dst{2} FE{35,1} DE{36,1} RN{37,1} DI{38,1} IS{39,11} RR{50,1} EX{51,5} WB{56,1} CM{57,3}
 # === Simulator Command =========
 # ./cse561sim 60 15 3 traces/sample_input_gcc 
 # === Processor Configuration ===

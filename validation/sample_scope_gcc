@@ -109,4 +109,4 @@
       96 fu{2} src{  5, -1} dst{  2}	                              FE DE RN DI IS RR EX EX EX EX EX WB CM CM CM CM CM CM CM CM CM CM CM CM CM 
       97 fu{0} src{  2, -1} dst{  2}	                              FE DE RN DI IS IS IS IS IS IS IS RR EX WB CM CM CM CM CM CM CM CM CM CM CM CM 
       98 fu{1} src{  2,  3} dst{  2}	                              FE DE RN DI IS IS IS IS IS IS IS IS IS RR EX EX WB CM CM CM CM CM CM CM CM CM 
-      99 fu{2} src{  2, -1} dst{  2}	                                          FE DE RN DI IS IS IS IS IS IS IS IS RR EX EX EX EX EX WB CM CM CM 
+      99 fu{2} src{  2, -1} dst{  2}	                                 FE DE RN DI IS IS IS IS IS IS IS IS IS IS IS RR EX EX EX EX EX WB CM CM CM 
