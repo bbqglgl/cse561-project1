@@ -106,7 +106,7 @@ int main(int argc, char* argv[])
 	// ./cse561sim <ROB_SIZE> <IQ_SIZE> <WIDTH> <tracefile>
 	if (argc < 5)
 	{
-		printf("number of argument is not enough!\n");
+		printf("Arguments format is not avliable!!\n ex)%s <ROB_SIZE> <IQ_SIZE> <WIDTH> <tracefile>\n", argv[0]);
 		return -1;
 	}
 
@@ -119,7 +119,7 @@ int main(int argc, char* argv[])
 
 	if (in == NULL)
 	{
-		printf("Can not open trace file!!\n");
+		printf("Can not open trace file!!\nCheck file name!\n");
 		return -2;
 	}
 
@@ -138,6 +138,11 @@ int main(int argc, char* argv[])
 		decode();
 		fetch();
 	} while (advance_cycle());
+
+	printf("=============================\n");
+	printf("Instruction : %d\n", (int)instructions.size());
+	printf("Cycles : %d\n", cycle);
+	printf("IPC : %.2f\n", (double)instructions.size() / (double)cycle);
 	return 0;
 }
 
