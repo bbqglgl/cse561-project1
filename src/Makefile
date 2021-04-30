@@ -4,15 +4,16 @@ OPT = -O3
 WARN = -Wall
 CFLAGS = $(OPT) $(WARN) #$(INC) $(LIB)
 
-SRC = main.cpp
-OBJ = main.o
+SRC = ces561sim.cpp
+OBJ = ces561sim.o
+ONAME = ces561sim
 
 #################################
 
 all: scope
 
 scope: $(OBJ)
-	$(CC) -o main $(CFLAGS) $(OBJ)
+	$(CC) -o $(ONAME) $(CFLAGS) $(OBJ)
 	@echo "-----------DONE WITH MAIN-----------"
  
 .cc.o:
