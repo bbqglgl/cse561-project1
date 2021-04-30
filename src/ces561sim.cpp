@@ -271,12 +271,10 @@ void dispatch()
 	static int _bdy = 0;
 	if (DI.empty())
 		return;
-	if (DI.size() > IQ_SIZE - issueQueue.size())
-		return;
 
 	int num;
 	INST* inst_ptr;
-	while(!DI.empty())
+	while(!DI.empty() && IQ_SIZE - issueQueue.size() > 0)
 	{
 		num = DI.front();
 		DI.pop();
