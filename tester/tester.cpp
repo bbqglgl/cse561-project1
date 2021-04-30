@@ -28,7 +28,7 @@ int main(int argc, char* argv[])
 			printf("%d,",rob);
 		}
 		printf("\n");
-		for(i=1;i<=3.1;i+=0.2)
+		for(i=0;i<=3.1;i+=0.2)
 		{
 			iq=round(pow(10.0, i));
 			printf("%d,",iq);
