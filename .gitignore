@@ -1,5 +1,5 @@
 *.o
-cse561sim
+cse561sim/cse561sim
 scope
 test
 output*
