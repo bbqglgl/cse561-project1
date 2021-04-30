@@ -3,6 +3,7 @@
 #include<queue>
 #include<list>
 #include<cstdlib>
+#include<cstring>
 
 using namespace std;
 typedef unsigned int UINT;
@@ -72,6 +73,8 @@ FILE* in;
 queue<UINT> DE, RN, DI, RR, WB;
 list<pair<UINT, UINT> > execute_list;
 
+bool simpleOutput = false;
+
 
 void initReg()
 {
@@ -114,6 +117,8 @@ int main(int argc, char* argv[])
 	IQ_SIZE = atoi(argv[2]);
 	WIDTH = atoi(argv[3]);
 	inputName = argv[4];
+	if(argc == 6 && strcmp("-o", argv[5])==0)
+		simpleOutput=true;
 
 	in = fopen(inputName.c_str(), "r");
 
@@ -139,6 +144,13 @@ int main(int argc, char* argv[])
 		fetch();
 	} while (advance_cycle());
 
+	if(simpleOutput)
+	{
+		FILE *out = fopen("./output.txt","w");
+		fprintf(out,"%.4lf",(double)instructions.size() / (double)cycle);
+		fclose(out);
+		return 0;
+	}
 	printf("=============================\n");
 	printf("Instruction : %d\n", (int)instructions.size());
 	printf("Cycles : %d\n", cycle);
@@ -155,6 +167,10 @@ void print_info(int num)
 		t.arch_src1 = -1;
 	if (t.arch_src2 == ARCH_REG_SIZE)
 		t.arch_src2 = -1;
+
+	if(simpleOutput)
+		return;
+
 	printf("%d fu{%d} src{%d,%d} dst{%d} FE{%d,%d} DE{%d,%d} RN{%d,%d} DI{%d,%d} IS{%d,%d} RR{%d,%d} EX{%d,%d} WB{%d,%d} CM{%d,%d}\n",num, t.type, t.arch_src1, t.arch_src2, t.arch_dest,
 		t.log[0], t.log[1] - t.log[0],
 		t.log[1], t.log[2] - t.log[1],
