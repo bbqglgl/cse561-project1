@@ -152,9 +152,13 @@ int main(int argc, char* argv[])
 		return 0;
 	}
 	printf("=============================\n");
+	int sum=0;
+	for(auto iter : instructions)
+		sum +=LATENCY_TYPE[iter.type];
 	printf("Instruction : %d\n", (int)instructions.size());
 	printf("Cycles : %d\n", cycle);
 	printf("IPC : %.2f\n", (double)instructions.size() / (double)cycle);
+	printf("Average latency : %.2f\n", (double)sum / (double)instructions.size());
 	return 0;
 }
 

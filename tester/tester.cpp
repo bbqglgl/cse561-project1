@@ -16,7 +16,6 @@ int main(int argc, char* argv[])
 	if(argc < 2)
 		return 0;
 	trace_path = argv[1];
-	printf("%s",trace_path.c_str());
 	FILE *fo;
 
 	for(int w=1;w<=10;w++)

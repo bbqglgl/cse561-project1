@@ -1,0 +1,26 @@
+File Tree
+==========
+./
+ |
+ --> ./cse561sim
+ --> ./cse561sim.cpp
+ --> ./Makefile
+
+Compile
+==========
+How to compile
+$ make
+
+or
+
+$ g++ -o cse561sim -O3 -Wall ces561sim.cpp
+
+
+Run simulator
+==========
+How to run this simulator
+$ ./cse561sim <ROB_SIZE> <IQ_SIZE> <WIDTH> <trace_filename>
+
+
+Full sources are on
+https://github.com/bbqglgl/cse561-project1
