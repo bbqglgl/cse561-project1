@@ -119,6 +119,9 @@ int main(int argc, char* argv[])
 	inputName = argv[4];
 	if(argc == 6 && strcmp("-o", argv[5])==0)
 		simpleOutput=true;
+	if(IQ_SIZE < WIDTH)
+		IQ_SIZE = WIDTH;
+
 
 	in = fopen(inputName.c_str(), "r");
 
@@ -273,7 +276,7 @@ void dispatch()
 {
 	const UINT log_index = 3;
 	static int _bdy = 0;
-	if (DI.empty())
+	if (DI.empty() || (int)(IQ_SIZE - issueQueue.size()) - (int)DI.size() < 0)
 		return;
 
 	int num;

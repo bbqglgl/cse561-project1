@@ -4,9 +4,9 @@ OPT = -O3
 WARN = -Wall
 CFLAGS = $(OPT) $(WARN) #$(INC) $(LIB)
 
-SRC = ces561sim.cpp
-OBJ = ces561sim.o
-ONAME = ces561sim
+SRC = cse561sim.cpp
+OBJ = cse561sim.o
+ONAME = cse561sim
 
 #################################
 

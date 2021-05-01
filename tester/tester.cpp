@@ -34,7 +34,7 @@ int main(int argc, char* argv[])
 			for(r=0;r<=3.1;r+=0.2)
 			{
 				rob=round(pow(10.0, r));
-				sprintf(path,"~/aca/proj1/cse561-project1/src/ces561sim %d %d %d %s -o",rob, iq, w, trace_path.c_str());
+				sprintf(path,"~/aca/proj1/cse561-project1/cse561sim/cse561sim %d %d %d %s -o",rob, iq, w, trace_path.c_str());
 				system(path);
 
 				fo = fopen("./output.txt","r");
